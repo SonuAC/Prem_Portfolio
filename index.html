@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREM PHOTOGRAPHY - Visual Storytelling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#gallery">PORTFOLIO</a></li>
+                <li><a href="#videos">MOTION</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>PREM PHOTOGRAPHY</h1>
+            <p>Capturing moments that transcend time through cinematic photography and authentic storytelling</p>
+            <button class="btn" onclick="scrollToGallery()">Explore Portfolio</button>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Explore a handpicked collection of moments captured through creativity, emotion, 
+                and storytelling from weddings to fashion, travel, and beyond.</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Wedding">Wedding</button>
+            <button class="filter-btn" data-filter="PreWedding">Pre-Wedding</button>
+            <button class="filter-btn" data-filter="Fashion">Fashion</button>
+            <button class="filter-btn" data-filter="Travel">Travel</button>
+            <button class="filter-btn" data-filter="Commercial">Commercial</button>
+            <button class="filter-btn" data-filter="BabyShower">Baby Shower</button>
+        </div>
+
+        <div class="masonry-grid" id="galleryGrid">
+            <!-- Gallery items will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Instagram Follow Section -->
+    <section class="instagram-section">
+        <div class="instagram-container">
+            <div class="instagram-icon">
+               
+                    
+               
+            </div>
+            <h3>Follow Us On Instagram</h3>
+            <a href="https://instagram.com/prem_photography_films_" target="_blank" class="instagram-handle">
+                @ prem_photography_films_
+            </a>
+            <p class="instagram-tagline">Stay updated with our latest work, behind-the-scenes moments, and exclusive content</p>
+        </div>
+    </section>
+
+   
+
+    <!-- Video Showcase -->
+    <section class="section" id="videos">
+        <div class="section-header">
+            <h2 class="section-title">Motion Stories</h2>
+            <p class="section-subtitle">Bringing stories to life through cinematic video and dynamic visual narratives</p>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-project" data-video-type="wedding">
+                <div class="video-frame" style="background-image: url('images/backgroundwd1.jpeg');">
+                    <div class="video-overlay">
+                        <div class="play-button">
+                            <div class="play-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-details">
+                    <span class="video-category">Wedding</span>
+                    <h3 class="video-title">Cinematic Wedding Film</h3>
+                    <p class="video-description">A love story captured through intimate moments and breathtaking cinematography</p>
+                    <div class="video-buttons">
+                        <button class="btn-primary">Watch Film</button>
+                        <button class="btn-outline">Behind Scenes</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-project" data-video-type="prewedding">
+                <div class="video-details">
+                    <span class="video-category">Pre-Wedding</span>
+                    <h3 class="video-title">Pre-Wedding Story</h3>
+                    <p class="video-description">Romantic journey of two souls coming together in beautiful moments</p>
+                    <div class="video-buttons">
+                        <button class="btn-primary">Watch Film</button>
+                        <button class="btn-outline">Behind Scenes</button>
+                    </div>
+                </div>
+                <div class="video-frame" style="background-image: url('images/backgroundprewd1.jpeg');">
+                    <div class="video-overlay">
+                        <div class="play-button">
+                            <div class="play-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-project" data-video-type="travel">
+                <div class="video-frame" style="background-image: url('images/TRimg1.jpeg');">
+                    <div class="video-overlay">
+                        <div class="play-button">
+                            <div class="play-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-details">
+                    <span class="video-category">Travel</span>
+                    <h3 class="video-title">Travel Documentary</h3>
+                    <p class="video-description">Journey through stunning landscapes and cultural experiences</p>
+                    <div class="video-buttons">
+                        <button class="btn-primary">Watch Film</button>
+                        <button class="btn-outline">Behind Scenes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <img src="images/prem.jpeg" alt="Photographer Portrait">
+                        <div class="about-image-overlay"></div>
+                    </div>
+                    <div class="about-quote">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor" opacity="0.2">
+                            <path d="M10 20c0-5.5 4.5-10 10-10v5c-2.8 0-5 2.2-5 5s2.2 5 5 5v5c-5.5 0-10-4.5-10-10zm20 0c0-5.5 4.5-10 10-10v5c-2.8 0-5 2.2-5 5s2.2 5 5 5v5c-5.5 0-10-4.5-10-10z" transform="scale(0.5)"/>
+                        </svg>
+                        <p>"Photography is the art of frozen time... the ability to store emotion and feelings within a frame."</p>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="about-header">
+                        <span class="about-label">About the Artist</span>
+                        <h2 class="about-title">Meet Prem Tavare</h2>
+                        <p class="about-subtitle">Visual Storyteller & Cinematic Photographer</p>
+                    </div>
+
+                    <div class="about-bio">
+                        <p class="bio-paragraph">
+                            My name is Prem Tavare, and photography has been my passion since I was in the 5th standard. What started as a simple interest slowly became something I truly love and enjoy. From an early age, I found happiness in capturing moments, emotions, and stories through my camera.  </p>
+                        
+                        <p class="bio-paragraph">
+                            As my journey grew, I had the opportunity to work under well-known and experienced photographers, learning valuable skills, techniques, and creative vision from them. I enjoy shooting all types of photography, as every shoot brings a new experience and a new story to tell. Photography allows me to express myself and connect deeply with the moments I capture..  </p>
+
+                        <p class="bio-paragraph">
+                            For me, photography is more than a profession—it gives me peace and balance. Music is also a big part of my creative process; I love listening to music while working, as it helps me stay calm and inspired. Through my lens, I aim to create meaningful images that preserve emotions and memories forever.   </p>
+                    </div>
+
+                    <div class="about-details">
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <h4>Experience</h4>
+                                <p>5+ Years<br>Professional Photography</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Specialization</h4>
+                                <p>Wedding, Cinematic Videos, Pre-Wedding, <br>Fashion, Commercial & Travel</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="about-passion">
+                        <h3>My Fashion Philosophy</h3>
+                        <p>
+                            Photography, to me, is the art of preserving authentic emotions and meaningful moments. My primary focus is on weddings and pre-weddings, where genuine connections, unscripted expressions, and timeless rituals come together to tell powerful stories. I approach every shoot with sensitivity and attention to detail, ensuring each frame reflects the true essence of the moment rather than staged perfection.
+                            </p>
+                        <p>
+                           Alongside people-centric storytelling, I draw inspiration from nature and wildlife, finding calm and balance in their raw beauty. I also specialize in creating cinematic films for weddings and events, where visuals, music, and movement combine to create emotionally engaging narratives. Through both photography and filmmaking, my goal is to deliver work that feels refined, sincere, and enduring.  </p>
+                    </div>
+
+                    
+
+                    <div class="about-cta">
+                        <a href="#contact" class="btn-primary">Let's Work Together</a>
+                        <a href="#gallery" class="btn-outline">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section bg-muted">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcase of comprehensive photography projects, each telling a unique story through carefully curated visual narratives</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-project-id="ethereal-romance">
+                <div class="project-image">
+                    <img src="images/featuredwdimg1.jpeg" alt="Ethereal Romance">
+                </div>
+                <div class="project-info">
+                    <p class="project-subtitle">Wedding Collection</p>
+                    <h3 class="project-title">Ethereal Romance</h3>
+                    <p class="project-description">A dreamy collection capturing the intimate moments and timeless elegance of a countryside wedding.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <p class="stat-label">Photos</p>
+                            <p class="stat-value">120</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-label">Duration</p>
+                            <p class="stat-value">2 days</p>
+                        </div>
+                        <div class="stat" style="grid-column: span 2;">
+                            <p class="stat-label">Location</p>
+                            <p class="stat-value">Belagavi </p>
+                        </div>
+                    </div>
+                    <button class="project-button">View Full Project</button>
+                </div>
+            </div>
+
+            <div class="project-card" data-project-id="urban-elegance">
+                <div class="project-image">
+                    <img src="images/featuredbsimg1.png" alt="Urban Elegance">
+                </div>
+                <div class="project-info">
+                    <p class="project-subtitle">Baby Shower</p>
+                    <h3 class="project-title">Precious Moments</h3>
+                    <p class="project-description">Capturing the glow, the love, and the promise of a new arrival</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <p class="stat-label">Photos</p>
+                            <p class="stat-value">85</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-label">Duration</p>
+                            <p class="stat-value">5 hours</p>
+                        </div>
+                        <div class="stat" style="grid-column: span 2;">
+                            <p class="stat-label">Location</p>
+                            <p class="stat-value">Belagavi</p>
+                        </div>
+                    </div>
+                    <button class="project-button">View Full Project</button>
+                </div>
+            </div>
+
+            <div class="project-card" data-project-id="wanderlust-chronicles">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Wanderlust Chronicles">
+                </div>
+                <div class="project-info">
+                    <p class="project-subtitle">Travel Series</p>
+                    <h3 class="project-title">Wanderlust Chronicles</h3>
+                    <p class="project-description">A visual journey through breathtaking landscapes and cultural discoveries across continents.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <p class="stat-label">Photos</p>
+                            <p class="stat-value">200</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-label">Duration</p>
+                            <p class="stat-value">3 weeks</p>
+                        </div>
+                        <div class="stat" style="grid-column: span 2;">
+                            <p class="stat-label">Location</p>
+                            <p class="stat-value">Multi-location</p>
+                        </div>
+                    </div>
+                    <button class="project-button">View Full Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="contact-title">Let's Create Together</h2>
+                
+                <!-- Instagram Handle -->
+                <div class="contact-instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>Follow us: </span>
+                    <a href="https://instagram.com/prem_photography_films_" target="_blank">@prem_photography_films_</a>
+                </div>
+
+                <p class="contact-intro">Ready to tell your story? Whether it's capturing your special day, creating compelling commercial content, or documenting your travels, I'm here to bring your vision to life through authentic visual storytelling.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p>premtavare78290@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Phone</h4>
+                            <p>+91 8073246283</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Based in</h4>
+                            <p>Available worldwide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-list">
+                    <h3>Services</h3>
+                    <div class="services-grid">
+                        <p class="service-item">• Wedding Photography</p>
+                        <p class="service-item">• Pre-Wedding Shoots</p>
+                        <p class="service-item">• Fashion Campaigns</p>
+                        <p class="service-item">• Commercial Work</p>
+                        <p class="service-item">• Travel Documentation</p>
+                        <p class="service-item">• Baby Shower Sessions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-header">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                    <h3>Start Your Project</h3>
+                </div>
+
+                <form id="contactForm" action="https://formsubmit.co/premtavare78290@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Project Inquiry from Portfolio Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" class="form-input" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" class="form-input" placeholder="Your last name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number (Optional)</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+91 1234567890">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Type</label>
+                        <select name="project_type" class="form-select" required>
+                            <option value="">Select project type</option>
+                            <option value="Wedding Photography">Wedding Photography</option>
+                            <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
+                            <option value="Fashion Campaign">Fashion Campaign</option>
+                            <option value="Commercial Work">Commercial Work</option>
+                            <option value="Travel Documentation">Travel Documentation</option>
+                            <option value="Baby Shower Session">Baby Shower Session</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Event Date (Optional)</label>
+                        <input type="date" name="event_date" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Details</label>
+                        <textarea name="message" class="form-textarea" placeholder="Tell me about your vision, timeline, and any specific requirements..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Modal for Quotations -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfProjectTitle">Project Quotation</h3>
+                <div class="pdf-header-actions">
+                    <button class="pdf-download-btn" id="pdfDownloadBtn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download
+                    </button>
+                    <button class="pdf-close-btn" id="closePdfBtn">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-viewer-container">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+                <div class="pdf-not-found" id="pdfNotFound">
+                    <div class="not-found-icon">
+                        <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                            <line x1="9" y1="11" x2="15" y2="11"/>
+                        </svg>
+                    </div>
+                    <h4>Quotation Not Available</h4>
+                    <p>The quotation PDF for this project has not been uploaded yet. Please contact us for pricing details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
